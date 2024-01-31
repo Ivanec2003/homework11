@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottomNavigationActionPlayList"
+        android:icon="@drawable/icon_play_list"
+        android:title="@string/bottomNavigationActionPlayListTitle"/>
+    <item
+        android:id="@+id/bottomNavigationActionPerformer"
+        android:icon="@drawable/icon_setting"
+        android:title="@string/bottomNavigationActionPerformerTitle"/>
+    <item
+        android:id="@+id/bottomNavigationActionSetting"
+        android:icon="@drawable/icon_performer"
+        android:title="@string/bottomNavigationActionSettingTitle"/>
+
+
+</menu>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingFragment">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbarSetting"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:foregroundGravity="left"
+        app:flow_wrapMode="chain"
+        app:flow_verticalStyle="packed"
+        app:flow_verticalGap="5dp"
+        app:constraint_referenced_ids="textViewNameProgram,textViewVersionProgram, textViewVersionCode"
+        app:layout_constraintTop_toBottomOf="@id/toolbarSetting"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationSetting"
+        app:layout_constraintStart_toEndOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:menu="@menu/bottom_navigation_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.2"/>
+
+    <TextView
+        android:id="@+id/textViewNameProgram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/flow"
+        android:hint="@string/textViewNameProgramHint"/>
+    <TextView
+        android:id="@+id/textViewVersionProgram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/flow"
+        app:layout_constraintTop_toBottomOf="@id/textViewNameProgram"
+        android:hint="@string/textViewVersionProgramHint"/>
+    <TextView
+        android:id="@+id/textViewVersionCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/flow"
+        app:layout_constraintTop_toBottomOf="@id/textViewVersionProgram"
+        android:hint="@string/textViewVersionCodeHint"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerformerFragment">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbarPerformer"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:foregroundGravity="left"
+        app:flow_wrapMode="chain"
+        app:flow_verticalStyle="packed"
+        app:flow_verticalGap="5dp"
+        app:constraint_referenced_ids="textViewNameSongPerformer, textViewPerformer"
+        app:layout_constraintTop_toBottomOf="@id/toolbarPerformer"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationPerformer"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationPerformer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:menu="@menu/bottom_navigation_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="VisualLintBottomNav" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.35"/>
+
+    <TextView
+        android:id="@+id/textViewNameSongPerformer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/flow"
+        android:text="@string/textViewNameSongPerformer"/>
+    <TextView
+        android:id="@+id/textViewPerformer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/flow"
+        app:layout_constraintTop_toBottomOf="@id/textViewPerformer"
+        android:text="@string/textViewPerformer"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

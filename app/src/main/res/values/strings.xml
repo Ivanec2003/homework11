@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">homework11</string>
+    <string name="textViewNameSongPerformer">Song: not information</string>
+    <string name="textViewPerformer">Performer: not information</string>
+    <string name="textViewNameProgramHint">Name of program</string>
+    <string name="textViewVersionProgramHint">Version of program"</string>
+    <string name="textViewVersionCodeHint">Version of code</string>
+    <string name="imageViewSongDescription">Image of song</string>
+    <string name="textViewNameSongDescription">Name of music</string>
+    <string name="bottomNavigationActionPlayListTitle">PlayList</string>
+    <string name="bottomNavigationActionPerformerTitle">Performer</string>
+    <string name="bottomNavigationActionSettingTitle">Setting</string>
+    <string name="toolbarNavigationHomeTitle">Home</string>
+    <string name="toolbarNavigationSettingTitle">Setting</string>
+</resources>
